@@ -6,7 +6,19 @@ public class Main {
 	    Component first = new FirstComponent();
 	    Component second = new SecondComponent();
 
+	    Component beforeDec = new BeforeDecorator(first);
+	    Component afterDec = new AfterDecorator(first);
+
+	    Component beforeDec2 = new BeforeDecorator(second);
+	    Component afterDec2 = new AfterDecorator(second);
+
 	    first.DoAction();
 	    second.DoAction();
+
+	    beforeDec.DoAction();
+	    afterDec.DoAction();
+
+	    beforeDec2.DoAction();
+	    afterDec2.DoAction();
     }
 }
